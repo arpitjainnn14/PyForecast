@@ -5,7 +5,7 @@ from backend import get_data
 
 st.set_page_config(layout='centered')
 
-st.title('Weather Forecast for the next 5 Days')
+st.title('PyForecast')
 
 place=st.text_input('Place',placeholder='Write the name of the place...')
 
