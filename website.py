@@ -15,7 +15,7 @@ option=st.selectbox('Select data to view',('Temperature','Sky'),placeholder='Sel
 
 st.subheader(f"{option} for the next {days} in {place}")
 
-#if the place value if filled then execute this
+#if the place value is filled then execute this
 try:
     if place:
         required_data=get_data(place,days)
@@ -43,7 +43,7 @@ try:
             
             st.plotly_chart(figure)
         
-        # check if the user has choosed sky, then find the all the values of sky and append them into the list
+        # check if the user has selected sky, then find the all the values of sky and append them into the list
         if option=="Sky":
             #fetches the sky conditions from the api data
             sky_data = []
@@ -58,7 +58,7 @@ try:
                 pp=images[i]
                 image_paths.append(pp)
             
-            #fetching the date data for writing the caption for images
+            #fetching the date for writing the caption
             date_data=[]
             for x in required_data:
                 uu=x["dt_txt"]
